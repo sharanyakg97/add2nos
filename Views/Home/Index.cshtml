@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model SimpleSumCalculator.Models.SumCalculator
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Add</h2>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <br />
+    @Html.EditorFor(m => m.firstNum)
+    <br />
+    @Html.EditorFor(m => m.secondNum)
+    <br />
+    @Html.DisplayFor(m => m.result)
+    <br />
+    <input type="submit" value="Add" />
+}
